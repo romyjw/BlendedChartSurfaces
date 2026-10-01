@@ -1,6 +1,7 @@
 # Blended Chart Surfaces
 
 Code for **"Blended Chart Surfaces: A Seamless Explicit Representation for Smooth Surface Fitting"**, Romy Williamson and Niloy Mitra. Journal paper at Pacific Graphics 2026 / Computer Graphics Forum.
+Project webpage: https://geometry.cs.ucl.ac.uk/projects/2026/bcs/index.html
 
 A Blended Chart Surface (BCS) is built on a coarse triangle mesh: each vertex has a polynomial patch associated with it, and the patches are blended across each triangle into one surface with smoothness guarantees. Code is available here to fit a BCS to a target shape given as an implicit function (like an sdf, but it doesn't have to be a strict sdf, either analytic or a pre-trained neural), by optimising the polynomial coefficients.
 
