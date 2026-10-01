@@ -1,0 +1,30 @@
+# Conda environment for the Blended Chart Surfaces code.
+#
+#   conda env create -f environment.yml
+#   conda activate bcs
+#
+# Versions match the environment used for the paper's results.
+# PyTorch and Open3D come from conda-forge so that they share one OpenMP
+# library (mixing the pip builds of both crashes on import on macOS).
+name: bcs
+channels:
+  - conda-forge
+dependencies:
+  - python=3.8.20
+  - pytorch=2.4.0
+  - open3d=0.18.0
+  - numpy=1.24.3
+  - scipy=1.10.1
+  - trimesh=4.5.3
+  - pyyaml=6.0.2
+  - scikit-image=0.19.3       # marching cubes in vis_sdf.ipynb
+  - imageio=2.36.0            # GIF export in curve_fitting_poly.ipynb
+  - opencv=4.10.0             # scripts/polyline_from_img.py only
+  - ipykernel=6.29.5
+  - pip
+  - pip:
+      - libigl==2.5.1
+      - matplotlib==3.7.5
+      - plyfile==1.0.3
+      - ipywidgets==7.8.5
+      - jupyterlab==4.3.8
