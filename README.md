@@ -2,7 +2,11 @@
 
 Code for **"Blended Chart Surfaces: A Seamless Explicit Representation for Smooth Surface Fitting"**, Romy Williamson and Niloy Mitra. Journal paper at Pacific Graphics 2026 / Computer Graphics Forum.
 
-A Blended Chart Surface (BCS) is built on a coarse triangle mesh: each vertex carries a polynomial chart over its one-ring, and the charts are blended across each triangle into one smooth surface. This repository fits a BCS to a target shape given as a signed distance function (SDF), either analytic or a pre-trained neural SDF, by optimising the polynomial coefficients. It also contains the 2D (curve) version of the method and the Djuren et al. (2025) baseline we compare against.
+A Blended Chart Surface (BCS) is built on a coarse triangle mesh: each vertex has a polynomial patch associated with it, and the patches are blended across each triangle into one surface with smoothness guarantees. Code is available here to fit a BCS to a target shape given as an implicit function (like an sdf, but it doesn't have to be a strict sdf, either analytic or a pre-trained neural), by optimising the polynomial coefficients.
+
+We provide a network structure in "deepsdf_models.py" and weights in the "BCS-neuralSDF-data" release, this is not part of our method but can be used as input. The available implicit shapes for testing (analytic and neural) are listed in "implicit_reps.py". You can add your own implicit fucntion definitions (analytic or neural) to this file if you wish.
+
+It also contains the toy 2D (curve) version of the method (used for the Shark illustration in the paper) and an implementation of the relevant part of the Djuren et al. (2025) method (just the setting with quadratic polynomial vertex-functions) that we compare against.
 
 ## Installation
 
