@@ -99,7 +99,7 @@ sdf_weights/          neural SDFs (curves included; surfaces via download_weight
 
 [`notebooks/djuren/djuren.py`](notebooks/djuren/djuren.py) is our implementation of the quadratic polynomial setting from Tobias Djuren et al. (2025), *Interpolating splines over triangulated surfaces by blending vertex-centric local geometries*. It is independent of the BCS code: each vertex gets a quadratic polynomial fitted by least squares to its one-ring neighbours, and these are blended over each triangle. As discussed in the paper, their surface interpolates the coarse mesh and needs no optimisation, whereas a BCS is optimised to fit a given implicit surface.
 
-## Citation
+## BibTex
 
 ```bibtex
 @article{williamson2026blendedchartsurfaces,
