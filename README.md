@@ -47,9 +47,9 @@ All notebooks can be run from anywhere inside the repository: their first cell s
 2. Run all cells. Section 4 runs `scripts/precomputation.py` to precompute the training samples, which takes a few minutes for a 500-face mesh.
 
 Outputs:
-- `results/<shape>/<settings>__<date>/`: the config, the proxy mesh and, if `testing = False`, per-epoch checkpoints and plots
-- `models/surfaces/<proxy>.pth`: the trained polynomial coefficients
-- `rendering/rendering_results/<shape>/`: renders of the final surface
+- `results/<shape>/<settings>__<date>/`: the config, the proxy mesh, checkpoints and plots
+- `models/surfaces/<proxy>.pth`: the optimised polynomial coefficients
+- `rendering/rendering_results/<shape>/`: output meshes with colour data, for rendering.
 
 The visualisations draw the BCS on subdivided sample triangles (`data/high_precision_subdiv_triangles/triangle_<mesh_res>.obj`). Levels 0–8 are included; for denser visualisations (levels 9–11), generate them first with [`scripts/make_subdiv_triangles.ipynb`](scripts/make_subdiv_triangles.ipynb).
 
