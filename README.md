@@ -62,15 +62,13 @@ Each config in `configs/surfaces/` has two parts. Main fields:
 | `surface-config.coarse_patches_id` | Coarse proxy mesh, `data/surfaces/<id>.obj` |
 | `surface-config.blend_type` | Blend function, e.g. `pou_inv_exp` or `pou_trig` (others are listed in `BCS_fast.blend_weight` in `bcs/surface.py`) |
 | `surface-config.overlap_param` | Overlap of the blend functions, between 0.1547 and 0.7321 |
-| `surface-config.degree` | Polynomial degree of the vertex charts |
+| `surface-config.degree` | Polynomial degree of the vertex functions/patches |
 | `surface-config.global_scale`, `local_scales` | Scaling of the polynomials; with `local_scales: true` it is also proportional to the local edge length |
 | `training-config.sdf_id` | Target SDF: an analytic shape, or `deep3d_<shape>` for a neural SDF |
 | `training-config.sdf_weights_path`, `model_variant` | Checkpoint in `sdf_weights/surfaces/` and its network architecture (see `bcs/deepsdf_models.py`) |
 | `training-config.sdf_transition_width` | Blends the neural SDF into a radial function far from the shape, to suppress spurious values there |
 | `training-config.num_samples_per_face`, `per_face_batch_size`, `max_epochs`, `initial_lr`, `min_lr` | Optimisation settings (AdamW with a cosine learning-rate schedule) |
-| `training-config.normals_reg_coeff`, `distortion_reg_coeff`, `area_weighting` | Optional regularisers (off in the provided configs) |
 
-`fertility500-djuren-mix.json` is an experimental mix of BCS with Djuren et al.'s blend weights and one-ring coordinates. It is **not** the Djuren et al. method; see the note in `BCS_fast.__init__`.
 
 ## Repository layout
 
