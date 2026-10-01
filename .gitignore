@@ -1,9 +1,9 @@
-data/
+data/*
 patches/
 output/
 results/
 models/
-sdf_weights/
+sdf_weights/*
 precomputed_data_10000pts-torus100.pth
 
 # Rendered / generated geometry outputs
@@ -32,3 +32,65 @@ __pycache__/
 
 # Generated renders
 rendering/
+
+# ---------------------------------------------------------------
+# Small data files that ARE tracked (exceptions to the rules above).
+# The DeepSDF checkpoints (sdf_weights/surfaces/) are not in git: they are
+# attached to a GitHub release; see scripts/download_weights.py.
+# ---------------------------------------------------------------
+
+# Coarse proxy meshes used by configs/surfaces/
+!data/surfaces/
+data/surfaces/*
+!data/surfaces/100face_sphere.obj
+!data/surfaces/100face_torus.obj
+!data/surfaces/arm500.obj
+!data/surfaces/bob200.obj
+!data/surfaces/bob300.obj
+!data/surfaces/bob400.obj
+!data/surfaces/bob500.obj
+!data/surfaces/cat-reference500.obj
+!data/surfaces/dice500.obj
+!data/surfaces/dice520.obj
+!data/surfaces/double_torus500.obj
+!data/surfaces/double_torusMC436.obj
+!data/surfaces/fandisk500.obj
+!data/surfaces/fertility200.obj
+!data/surfaces/fertility300.obj
+!data/surfaces/fertility500.obj
+!data/surfaces/fruit500.obj
+!data/surfaces/gear500.obj
+!data/surfaces/icosahedron.obj
+!data/surfaces/igea200.obj
+!data/surfaces/igea500.obj
+!data/surfaces/lion-reference200.obj
+!data/surfaces/lion-reference300.obj
+!data/surfaces/lion-reference500.obj
+!data/surfaces/mobius220-v7.obj
+!data/surfaces/oloid100.obj
+!data/surfaces/oloid50.obj
+!data/surfaces/oloid500.obj
+!data/surfaces/rippley400.obj
+!data/surfaces/torus500.obj
+!data/surfaces/twisted_torus200.obj
+!data/surfaces/twisted_torus500.obj
+!data/surfaces/urchin210.obj
+!data/surfaces/wobbly_torus200.obj
+!data/surfaces/wobbly_torus300.obj
+
+# Curve polylines used by the curve and 2D SDF notebooks
+!data/curves/
+!data/curves/*.obj
+
+# Subdivided sample triangles up to level 8 (denser ones: scripts/make_subdiv_triangles.ipynb)
+!data/high_precision_subdiv_triangles/
+data/high_precision_subdiv_triangles/*
+!data/high_precision_subdiv_triangles/triangle_[0-8].obj
+
+# Small 2D curve SDF networks
+!sdf_weights/curves/
+sdf_weights/curves/*
+!sdf_weights/curves/*.pth
+
+# Stripped checkpoints prepared for the GitHub release (not committed)
+release_assets/
