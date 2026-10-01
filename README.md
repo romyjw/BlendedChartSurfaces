@@ -36,11 +36,10 @@ All notebooks can be run from anywhere inside the repository: their first cell s
 
 | Notebook | What it does |
 |---|---|
-| [`notebooks/surface_fitting.ipynb`](notebooks/surface_fitting.ipynb) | **Main method.** Fits a BCS to a 3D target SDF, given a config from `configs/surfaces/`, then visualises and saves the result. Instructions are at the top of the notebook. |
-| [`notebooks/curve_fitting_poly.ipynb`](notebooks/curve_fitting_poly.ipynb) | The 2D version: fits a blended curve to a 2D SDF. Also demonstrates equivariance to rotation, translation and scaling, and shows normals and osculating circles. |
+| [`notebooks/surface_fitting.ipynb`](notebooks/surface_fitting.ipynb) | **Main method.** Fits a BCS to a 3D target SDF, given a config from `configs/surfaces/`, then visualises and saves the result. Instructions are in the notebook. |
+| [`notebooks/curve_fitting_poly.ipynb`](notebooks/curve_fitting_poly.ipynb) | The toy 2D version: fits a blended curve to a 2D neural SDF, with interactive visualisations and verification of the equivariance properties. |
 | [`notebooks/sdf_2d_fitting.ipynb`](notebooks/sdf_2d_fitting.ipynb) | Fits a small neural SDF to a 2D polyline (`data/curves/`), giving target shapes for the curve notebook. |
-| [`notebooks/vis_sdf.ipynb`](notebooks/vis_sdf.ipynb) | Visualises a 3D target SDF: interactive slices, gradient magnitudes and a marching-cubes mesh. |
-| [`notebooks/djuren/djuren_test.ipynb`](notebooks/djuren/djuren_test.ipynb) | Our implementation of the quadratic setting of Djuren et al. (2025), used as a baseline. See [Djuren et al. baseline](#djuren-et-al-baseline). |
+| [`notebooks/vis_sdf.ipynb`](notebooks/vis_sdf.ipynb) | Visualises a 3D target SDF: interactive slices, gradient magnitudes and a marching-cubes mesh. To make a coarse mesh for a new BCS, you can use the marching cubes result from here and then do quadric edge decimation in e.g. Meshlab. |
 
 ### Fitting a surface
 
