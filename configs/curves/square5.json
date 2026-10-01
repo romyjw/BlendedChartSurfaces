@@ -1,0 +1,6 @@
+{
+"shape_id" : "square",
+"coarse_edges_id" : "circle_bdry_5",
+"overlap_param" : 0.7,
+"global_scale" : 0.1
+}

@@ -1,0 +1,34 @@
+data/
+patches/
+output/
+results/
+models/
+sdf_weights/
+precomputed_data_10000pts-torus100.pth
+
+# Rendered / generated geometry outputs
+rendering/rendering_results/
+
+# Mesh / geometry exports
+*.ply
+*.obj
+*.off
+*.stl
+
+# Optional other generated data
+*.npy
+*.npz
+*.pkl
+*.pt
+*.pth
+*.ckpt
+
+# OS / editor / Python clutter
+.DS_Store
+.ipynb_checkpoints/
+.virtual_documents/
+__pycache__/
+.conda/
+
+# Generated renders
+rendering/

@@ -1,0 +1,26 @@
+{
+"shape-name" : "lion-reference",
+"surface-config" : 
+	{
+		"blend_type" : "pou_trig",
+		"coarse_patches_id" : "lion-reference200",
+		"overlap_param" : 0.73,
+		"degree" : 2,
+		"global_scale" : 0.5,
+		"local_scales" : true 
+	},
+
+"training-config" :
+	{
+		"sdf_id" : "deep3d_lion-reference",
+		"sdf_weights_path": "deep3d_lion-reference_best.ckpt",
+		"num_samples_per_face" : 10000,
+		"max_epochs" : 20,
+		"per_face_batch_size" : 2,
+		"normals_reg_coeff" : 0.0,
+		"distortion_reg_coeff" : 0.0,
+		"area_weighting" : false,
+		"initial_lr" : 1e-3,
+		"min_lr" : 1e-5
+	}	
+}

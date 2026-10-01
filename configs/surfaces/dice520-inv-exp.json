@@ -1,0 +1,28 @@
+{
+"shape-name" : "dice",
+"surface-config" : 
+	{
+		"blend_type" : "pou_inv_exp",
+		"coarse_patches_id" : "dice520",
+		"overlap_param" : 0.73,
+		"degree" : 2,
+		"global_scale" : 0.5,
+		"local_scales" : true 
+	},
+
+"training-config" :
+	{
+		"sdf_id" : "deep3d_dice",
+		"sdf_weights_path" : "deep3d_dice_best.ckpt",
+		"model_variant" : "v3_soft2",
+		"sdf_transition_width" : 10.0,
+		"num_samples_per_face" : 10000,
+		"max_epochs" : 20,
+		"per_face_batch_size" : 100,
+		"normals_reg_coeff" : 0.0,
+		"distortion_reg_coeff" : 0.0,
+		"area_weighting" : false,
+		"initial_lr" : 1e-3,
+		"min_lr" : 1e-5
+	}	
+}

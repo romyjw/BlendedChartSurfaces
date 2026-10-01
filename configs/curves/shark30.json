@@ -1,0 +1,6 @@
+{
+"shape_id" : "deep2d_shark",
+"coarse_edges_id" : "shark30",
+"overlap_param_v" : 0.5,
+"global_scale" : 0.1
+}

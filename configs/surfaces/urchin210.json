@@ -1,0 +1,25 @@
+{
+"shape-name" : "urchin",
+"surface-config" : 
+	{
+		"blend_type" : "pou_trig",
+		"coarse_patches_id" : "urchin210",
+		"overlap_param" : 0.73,
+		"degree" : 2,
+		"global_scale" : 0.5,
+		"local_scales" : true 
+	},
+
+"training-config" :
+	{
+		"sdf_id" : "urchin",
+		"num_samples_per_face" : 10000,
+		"max_epochs" : 20,
+		"per_face_batch_size" : 10,
+		"normals_reg_coeff" : 0.0,
+		"distortion_reg_coeff" : 0.0,
+		"area_weighting" : false,
+		"initial_lr" : 1e-3,
+		"min_lr" : 1e-5
+	}	
+}

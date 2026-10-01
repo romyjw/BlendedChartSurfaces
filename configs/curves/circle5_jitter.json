@@ -1,0 +1,7 @@
+{
+"shape_id" : "circle",
+"coarse_edges_id" : "circle_bdry_5_jitter",
+"overlap_param_v" : 0.5,
+"global_scale" : 0.1,
+"use_normals_loss" : false
+}
