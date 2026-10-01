@@ -55,7 +55,7 @@ The visualisations draw the BCS on subdivided sample triangles (`data/high_preci
 
 ### Configs
 
-Each config in `configs/surfaces/` has two parts. Main fields:
+Each config in `configs/surfaces/` has two parts: surface-config and training-config. Main fields:
 
 | Field | Meaning |
 |---|---|
